@@ -3,8 +3,9 @@ package co.edu.uniquindio.poo;
 public class Rectangulo extends Figura {
     public final double ancho;
     public final double alto;
-    public Rectangulo(String nombre, double ancho, double alto) {
-        super(nombre);
+    public Rectangulo(double ancho, double alto) {
+        assert ancho>0;
+        assert alto >0;
         this.ancho = ancho;
         this.alto = alto;
     }
@@ -13,6 +14,10 @@ public class Rectangulo extends Figura {
     }
     public double getAlto() {
         return alto;
+    }
+    @Override
+    public double calcularArea() {
+       return ancho*alto;
     }
     
     

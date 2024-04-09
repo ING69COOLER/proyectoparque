@@ -7,6 +7,8 @@
  */
 package co.edu.uniquindio.poo;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.logging.Logger;
 import org.junit.jupiter.api.Test;
@@ -21,9 +23,28 @@ public class AppTest {
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue() {
-        LOG.info("Iniciado test shouldAnswerWithTrue");
-        assertTrue(true);
-        LOG.info("Finalizando test shouldAnswerWithTrue");
+    public void areaCirculoPositivo() {
+        LOG.info("Iniciado test areaCirculoPositivo");
+        Circulo circulo = new Circulo(10.00);
+        assertEquals(314.159, circulo.calcularArea(),0.05);
+        LOG.info("Finalizando test areaCirculoPositivo");
     }
+
+    @Test
+    public void areaCirculoNegativa() {
+        LOG.info("Iniciado test areaCirculoNegativa");
+        assertThrows(Throwable.class,()-> new Circulo(-10));
+        
+        LOG.info("Finalizando test areaCirculoNegativa");
+    }
+    @Test
+    public void areaRectangulo() {
+        LOG.info("Iniciado test areaRectangulo");
+        Rectangulo rectangulo = new Rectangulo(10, 40);
+        assertEquals(400, rectangulo.calcularArea());
+        
+        LOG.info("Finalizando test areaRectangulo");
+    }
+
+
 }

@@ -1,15 +1,8 @@
 package co.edu.uniquindio.poo;
 
-public class Figura {
-    private final String nombre;
+public abstract class Figura {
+    public abstract double calcularArea();// se crea para que sea bligatorio y que se pueda hacer de maenra distinta 
 
-    public Figura(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
+    
     
 }

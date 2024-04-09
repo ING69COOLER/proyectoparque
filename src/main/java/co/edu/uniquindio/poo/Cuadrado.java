@@ -1,8 +1,4 @@
 package co.edu.uniquindio.poo;
-import java.util.LinkedList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
 
 
 public class Cuadrado extends Rectangulo {
@@ -16,6 +12,4 @@ public class Cuadrado extends Rectangulo {
     public double getLado() {
         return lado;
     }
-    
-    
 }

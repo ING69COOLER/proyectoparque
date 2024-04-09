@@ -1,10 +1,6 @@
-package co.edu.uniquindio.poo;
-import java.util.LinkedList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
+package co.edu.uniquindio.poo;//name space
 public class Circulo extends Figura {
-    public final double radio;
+    private final double radio;
 
    
 
